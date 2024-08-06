@@ -26,6 +26,10 @@ def grafico_dispersion_precios(df):
         plt.grid(True)
         plt.tight_layout()
         plt.show()
+
+        # Guardar el gráfico como archivo de imagen
+        plt.savefig('imagenes/grafico_dispersion_precios.png')
+        plt.close()
     else:
         logging.warning("El DataFrame está vacío o es None.")
 
@@ -69,6 +73,10 @@ def grafico_histogramas_por_marca(df):
             plt.grid(True, linestyle='--', alpha=0.7)
             plt.tight_layout()
             plt.show()
+
+            # Guardar el histograma como archivo de imagen
+            plt.savefig(f'imagenes/histograma_{marca}.png')
+            plt.close()
     else:
         logging.warning("El DataFrame está vacío o es None.")
 
@@ -89,6 +97,11 @@ def grafico_boxplot(df):
         plt.grid(True, linestyle='--', alpha=0.7)
         plt.tight_layout()
         plt.show()
+
+        # Guardar el boxplot como archivo de imagen
+        plt.savefig('imagenes/boxplot_precios_marca.png')
+        plt.close()
+
     else:
         logging.warning("El DataFrame está vacío o es None.")
 
@@ -110,6 +123,10 @@ def grafico_barras_marca(df):
         plt.grid(True, linestyle='--', alpha=0.7)
         plt.tight_layout()
         plt.show()
+
+        # Guardar el gráfico de barras como archivo de imagen
+        plt.savefig('imagenes/barras_marca.png')
+        plt.close()
     else:
         logging.warning("El DataFrame está vacío o es None.")
 
